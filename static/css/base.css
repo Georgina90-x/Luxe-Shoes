@@ -3,6 +3,8 @@
     --teal: #0ababd;
     --black: #000;
     --white: #fff;
+    --pink: #FF8096;
+    --taupe: #8C7D75;
 }
 
 /* Website fonts */
@@ -40,6 +42,7 @@ body {
     width: 1.5rem;
 }
 
+/* Main logo/branding styles */
 .logo-font {
     text-transform: uppercase;
 }
@@ -48,8 +51,9 @@ body {
     width: fit-content;
 }
 
+/* Styling for buttons */
 .shop-now-button {
-    background: var(--teal);
+    background: var(--taupe);
     color: var(--black);
     min-width: 260px;
 }
@@ -57,6 +61,11 @@ body {
 .btn-black {
     background: var(--black);
     color: var(--white);
+}
+
+.btn-taupe {
+    background: var(--taupe);
+    color: var(--black);
 }
 
 .shop-now-button:hover,
@@ -79,6 +88,12 @@ body {
 
 .border-teal {
     border: var(--teal) 1px solid !important;
+}
+
+/* Delivery Banner Styling */
+
+.bg-taupe {
+    background-color: var(--taupe);
 }
 
 /* -------------------------------------------MEDIA QUERIES */
