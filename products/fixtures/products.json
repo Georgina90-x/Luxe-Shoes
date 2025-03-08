@@ -1,0 +1,86 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "ls0000000001",
+        "name": "Luxe Black Boots",
+        "description": "These luxury boots are crafted with the highest quality leather and feature hand-finished detailing.",
+        "price": 99.99,
+        "category": 1,
+        "rating": 5.0,
+        "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000001.jpg",
+        "image": "ls0000000001.jpg"
+      }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000002",
+          "name": "Luxe Black Flats",
+          "description": "These luxury ballet flats offer comfort that can be dressed up and dressed down.",
+          "price": 79.99,
+          "category": 2,
+          "rating": 4.9,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000002.jpg",
+          "image": "ls0000000002.jpg"
+        }
+      },
+      {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000003",
+          "name": "Luxe Black Heels 5in",
+          "description": "The perfect accompaniment to your Little Black Dress. Featuring a 5in heel, these shoes will make a statement.",
+          "price": 149.99,
+          "category": 3,
+          "rating": 4.8,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000003.jpg",
+          "image": "ls0000000003.jpg"
+        }
+      },
+      {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000004",
+          "name": "Luxe Trainers",
+          "description": "Who said you can't get luxury trainers? Our brand new Luxe Black Trainers are feature hand stitching to the highest standard.",
+          "price": 79.99,
+          "category": 4,
+          "rating": 4.7,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000004.jpg",
+          "image": "ls0000000004.jpg"
+        }
+      },
+      {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000005",
+          "name": "Leather Balm",
+          "description": "Protect your Luxe Shoes with our specially formulated Leather Balm.",
+          "price": 9.99,
+          "category": 5,
+          "rating": 4.6,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000005.jpg",
+          "image": "ls0000000005.jpg"
+        }
+      },
+      {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000006",
+          "name": "Luxe Crew Socks",
+          "description": "The Luxe Crew Socks are made from a cotton and polyester mix to ensure they last.",
+          "price": 9.99,
+          "category": 6,
+          "rating": 4.5,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000006.jpg",
+          "image": "ls0000000006.jpg"
+        }
+      }
+]
