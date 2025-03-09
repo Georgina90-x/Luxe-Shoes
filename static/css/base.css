@@ -109,6 +109,11 @@ body {
     z-index: -1;
 }
 
+/* Font styling for products page & product details */
+.product-details-container, .product-container {
+    font-family: 'Raleway', serif;
+}
+
 /* -------------------------------------------MEDIA QUERIES */
 
 /* XL Screens */
@@ -130,5 +135,16 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* padding for mobile navbar */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
