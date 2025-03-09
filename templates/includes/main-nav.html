@@ -18,11 +18,11 @@
                 Womens Shoes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="womens-shoes-link">
-                <a href="" class="dropdown-item">Boots</a>
-                <a href="" class="dropdown-item">Flats</a>
-                <a href="" class="dropdown-item">Heels</a>
-                <a href="" class="dropdown-item">Trainers</a>
-                <a href="" class="dropdown-item">All Shoes</a>
+                <a href="{% url 'products' %}?category=boots" class="dropdown-item">Boots</a>
+                <a href="{% url 'products' %}?category=flats" class="dropdown-item">Flats</a>
+                <a href="{% url 'products' %}?category=heels" class="dropdown-item">Heels</a>
+                <a href="{% url 'products' %}?category=trainers" class="dropdown-item">Trainers</a>
+                <a href="{% url 'products' %}?category=boots,flats,heels,trainers" class="dropdown-item">All Shoes</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -31,9 +31,9 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
-                <a href="" class="dropdown-item">Shoe Care</a>
-                <a href="" class="dropdown-item">Socks</a>
-                <a href="" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=shoecare" class="dropdown-item">Shoe Care</a>
+                <a href="{% url 'products' %}?category=socks" class="dropdown-item">Socks</a>
+                <a href="{% url 'products' %}?category=shoecare,socks" class="dropdown-item">All Accessories</a>
             </div>
         </li>
     </ul>

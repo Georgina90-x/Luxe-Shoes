@@ -195,11 +195,11 @@ The following are credits to various people and technologies that have directly 
 | [LucidChart](https://www.lucid.app) | README | Used to create a Use Case & Database Schema Diagram. |
 | [Jaclyn Moy](https://unsplash.com/photos/womens-seven-assorted-color-footwear-on-surface-ugZxwLQuZec) | Homepage| Used as the background image on the homepage |
 
-https://www.vecteezy.com/photo/34127750-high-heels-in-black-velvet-on-white-background - black heels - syedsmbd
+https://www.vecteezy.com/photo/46562243-3d-rendering-pair-of-women-s-high-heels - black heels - 1017043463441
 https://www.vecteezy.com/photo/10098606-woman-shoes-isolated-on-white - black ballet flats - 
 jack_buu
-https://www.vecteezy.com/photo/13619990-female-winter-leather-shoes - black boots - alex-bush1662230
-https://www.vecteezy.com/photo/50632018-sneakers-isolated-on-white-background - black trainers - saddhavisual
+https://www.vecteezy.com/photo/48162162-black-leather-ankle-boots - black boots - rysak
+https://www.vecteezy.com/photo/51443511-plain-white-sneakers-with-minimalist-design-isolated-on-white-background - white trainers - saddhavisual
 https://www.vecteezy.com/photo/24496898-photo-of-softening-shea-butter-lip-balm-ai-generated - leather balm - 107284640629537
 https://www.vecteezy.com/photo/2901818-black-crew-socks-isolated-on-white-background-with-clipping-path - black crew socks - thatphichai.ys27
 
