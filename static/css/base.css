@@ -21,6 +21,8 @@
     font-style: normal;
   }
 
+/* Main body style */
+
 html {
     height: 100%;
 }
@@ -94,6 +96,17 @@ body {
 
 .bg-taupe {
     background-color: var(--taupe);
+}
+
+/* Overlay for products pages to have white background */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--white);
+    z-index: -1;
 }
 
 /* -------------------------------------------MEDIA QUERIES */
