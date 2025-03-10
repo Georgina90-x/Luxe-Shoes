@@ -114,6 +114,15 @@ body {
     font-family: 'Raleway', serif;
 }
 
+/* Category badge background styles */
+.category-badge {
+    font-family: 'Raleway', serif;
+}
+a.category-badge > span.badge:hover {
+    background: var(--taupe) !important;
+    color: var(--white) !important;
+}
+
 /* -------------------------------------------MEDIA QUERIES */
 
 /* XL Screens */
