@@ -44,6 +44,28 @@
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            {% with product.shoe_sizes as s %}
+                            {% if s %}
+                                <div class="col-12">
+                                    <p><strong>Size:</strong></p>
+                                    <select class="form-control rounded-lg w-50" name="shoe_size" id="id_shoe_size">
+                                        <option value="jk">UK 2.5/ US 5</option>
+                                        <option value="lm">UK 3/ US 5.5</option>
+                                        <option value="no">UK 3.5/ US 6</option>
+                                        <option value="pq">UK 4/ US 6.5</option>
+                                        <option value="rs">UK 4.5/ US 7</option>
+                                        <option value="tu">UK 5/ US 7.5</option>
+                                        <option value="vw">UK 5.5/ US 8</option>
+                                        <option value="xy">UK 6/ US 8.5</option>
+                                        <option value="z">UK 6.5/ US 9</option>
+                                        <option value="z">UK 7/ US 9.5</option>
+                                        <option value="z">UK 7.5/ US 10</option>
+                                        <option value="z">UK 8/ US 10.5</option>
+                                        <option value="z">UK 8.5/ US 11</option>
+                                        <option value="z">UK 9/ US 11.5</option>
+                                    </select>
+                                </div>
+                            {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -52,16 +74,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <div class="col{% if s %}-12 m-2{% endif %}">
+                                <a href="{% url 'products' %}" class="btn border rounded mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-taupe rounded text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
