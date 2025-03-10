@@ -92,6 +92,19 @@ body {
     border: var(--teal) 1px solid !important;
 }
 
+.btn-outline-black {
+    background: var(--white);
+    color: var(--black) !important;
+    border: var(--black) 1px solid;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: var(--black);
+    color: var(--white) !important;
+}
+
 /* Delivery Banner Styling */
 
 .bg-taupe {
