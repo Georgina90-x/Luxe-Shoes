@@ -154,6 +154,11 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Shopping Bag Styles */
+.shopping-bag {
+    font-family: 'Raleway', serif;
+}
+
 
 /* -------------------------------------------MEDIA QUERIES */
 
