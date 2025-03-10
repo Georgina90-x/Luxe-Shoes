@@ -150,8 +150,16 @@ a.category-badge > span.badge:hover {
     color: var(--white) !important;
 }
 
-.btt-link {
+.btt-link,
+.update.link,
+.remove-link {
     cursor: pointer;
+}
+
+.update-link:hover,
+.remove-item:hover {
+    background: var(--white);
+    color: var(--black) !important;
 }
 
 /* Shopping Bag Styles */
