@@ -136,7 +136,7 @@ a.category-badge > span.badge:hover {
     color: var(--white) !important;
 }
 
-/* Style for back to top button in products */
+/* Style for back to top button in products & update/remove buttons in bag */
 .btt-button {
     height: 42px;
     width: 42px;
