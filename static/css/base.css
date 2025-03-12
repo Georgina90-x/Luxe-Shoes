@@ -32,7 +32,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Baskervville SC';
+    font-family: 'Raleway', serif;
 }
 
 /* from Bulma */
@@ -47,6 +47,7 @@ body {
 /* Main logo/branding styles */
 .logo-font {
     text-transform: uppercase;
+    font-family: 'Baskervville SC';
 }
 
 .main-logo-link {
@@ -120,6 +121,11 @@ body {
     position: fixed;
     background: var(--white);
     z-index: -1;
+}
+
+/* Style for account and shopping bag icons */
+.account-basket {
+    font-family: 'Baskervville SC' !important;
 }
 
 /* Font styling for products page & product details */

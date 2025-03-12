@@ -122,7 +122,7 @@
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-lg btn-lg">
                         <span class="icon">
-                            <i class="fa-regular fa-chevron-left"></i>
+                            <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
@@ -147,7 +147,7 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('shoe_size');
+        var shoesize = $(this).data('shoe_size');
         var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'shoe_size': shoesize};
         $.post(url, data)
