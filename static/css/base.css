@@ -238,6 +238,10 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+.checkout-style {
+    font-family: 'Raleway', serif;
+}
+
 
 
 /* -------------------------------------------MEDIA QUERIES */
