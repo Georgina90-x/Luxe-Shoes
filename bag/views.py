@@ -81,6 +81,7 @@ def adjust_bag(request, item_id):
 def remove_from_bag(request, item_id):
     """ Remove the product from the shopping bag """
     try:
+        product = get_object_or_404(Product, pk=item_id)
         shoesize = None
         if 'shoe_size' in request.POST:
             shoesize = request.POST['shoe_size']

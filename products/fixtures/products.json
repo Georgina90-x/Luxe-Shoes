@@ -82,5 +82,34 @@
           "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000006.jpg",
           "image": "ls0000000006.jpg"
         }
+      },
+      {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000006",
+          "name": "TESTING",
+          "description": "The Luxe Crew Socks are made from a cotton and polyester mix to ensure they last.",
+          "price": 9.99,
+          "category": 6,
+          "rating": 4.5,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000006.jpg",
+          "image": "ls0000000006.jpg"
+        }
+      },
+      {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+          "sku": "ls0000000004",
+          "name": "TESTING",
+          "description": "Who said you can't get luxury trainers? Our brand new Luxe Black Trainers are feature hand stitching to the highest standard.",
+          "price": 79.99,
+          "category": 4,
+          "rating": 4.7,
+          "image_url": "/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/media/ls0000000004.jpg",
+          "image": "ls0000000004.jpg"
+        }
       }
+
 ]
