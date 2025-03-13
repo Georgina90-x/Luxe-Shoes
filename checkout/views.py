@@ -41,18 +41,19 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else: 
+                    else: # CHECK WHETHER THIS IS CORRECT, AFFECTING ADMIN AND CANT VIEW ORDER
                         for shoesize, quantity in item_data['items_by_shoesize'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
                                 quantity=quantity,
-                                shoe_size=shoesize,
+                                product_size=shoesize,
                             )
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found. Please contact us for assistance.")
+                        "One of the products in your bag wasn't found.\
+                              Please contact us for assistance.")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
