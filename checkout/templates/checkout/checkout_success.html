@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 {% endif %}
-
+                {% if order.postcode %}
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Postcode:</p>
@@ -133,7 +133,7 @@
                         <p class="mb-0">{{ order.postcode }}</p>
                     </div>
                 </div>
-
+                {% endif %}
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Country:</p>
