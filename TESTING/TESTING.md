@@ -144,17 +144,33 @@ The following are bugs that I have come across while creating the Workout site.
 
 | Original image | Bug fixed image |
 | :---: | :---: |
-| ![screenshot](TESTING/media/checkout-access-error.png) | ![screenshot]() |
+| ![screenshot](T/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/checkout-access-error.jpg) | ![screenshot](TESTING/media/shoesizes-model.png) |
 
-- To fix this...
+- To fix this the shoe_sizes model had a character limit of 2, the sizes require more characters, so this was adjusted to 10 and fixed the issue and the checkout form now loads.
+
+- When processing orders in the checkout, the form would not load.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/checkout-access-error.jpg) | ![screenshot](TESTING/media/country-fields-error-fix.png) |
+
+- The country field from Django CountryFields wasn't able to render correctly causing the bug. The dropdown has been removed until a solution is found.
+
+- When filling in the form and trying to process an order an error appears stating an issue with the lineitem.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](TESTING/media/checkout-lineitem-error.png) | ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/lineitem-error-fix.png) |
+
+- Changed the null value to True, this then generated an error within the settings.py for 'STANDARD_DELIVERY_PRICE', this was fixed by amending a typo.
 
 - When processing orders in the checkout, when accessing orders in the admin, the order details do not show the product details and prices.
 
 | Original image | Bug fixed image |
 | :---: | :---: |
-| ![screenshot](TESTING/media/checkout-access-error.png) | ![screenshot]() |
+| ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/order-admin-issue.png) | ![screenshot]() |
 
-- To fix this...
+- When amending the lineitem issue, the products now appeared in the order, but the price does not show.
 
 ***
 

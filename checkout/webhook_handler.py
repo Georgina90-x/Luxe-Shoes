@@ -34,8 +34,7 @@ class StripeWH_Handler:
 
         billing_details = stripe_charge.billing_details  # updated
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2) # updated
-
+        grand_total = round(stripe_charge.amount / 100, 2)  # updated
 
         for field, value in shipping_details.address.items():
             if value == "":
@@ -65,9 +64,9 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
-                return HttpResponse(
-                    content=f'Webhook received: {event['type']} | SUCCESS: Verfied order already in database.',
-                    status=200)
+            return HttpResponse(
+                content=f'Webhook received: {event['type']} | SUCCESS: Verfied order already in database.',
+                status=200)
         else:
             order = None
             try:
@@ -85,23 +84,23 @@ class StripeWH_Handler:
                         stripe_pid=pid,
                         )
                 for item_id, item_data in json.loads(bag).items():
-                        product = Product.objects.get(id=item_id)
-                        if isinstance(item_data, int):
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+                    else:  # CHECK WHETHER THIS IS CORRECT, AFFECTING ADMIN AND CANT VIEW ORDER
+                        for shoesize, quantity in item_data['items_by_shoesize'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=item_data,
-                            )
+                                quantity=quantity,
+                                shoe_size=shoesize,
+                                )
                             order_line_item.save()
-                        # else: # CHECK WHETHER THIS IS CORRECT, AFFECTING ADMIN AND CANT VIEW ORDER
-                                # for shoesize, quantity in item_data['items_by_shoesize'].items():
-                                    #order_line_item = OrderLineItem(
-                                    # order=order,
-                                        #product=product,
-                                        #quantity=quantity,
-                                        # product_size=shoesize,
-                                    # )
-                                    #order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
