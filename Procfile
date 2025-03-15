@@ -1,2 +1,1 @@
-web: gunicorn
-luxe_shoes.wsgi:application
+web: gunicorn luxe_shoes.wsgi:application
