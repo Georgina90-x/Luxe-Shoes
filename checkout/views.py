@@ -73,11 +73,11 @@ def checkout(request):
                         else:
                             for shoesize, quantity in item_data['items_by_shoesize'].items():
                                 order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                shoe_sizes=shoesize, #maybe change this back?
-                                )
+                                    order=order,
+                                    product=product,
+                                    quantity=quantity,
+                                    shoe_sizes=shoesize,  #maybe change this back?
+                                    )
                                 order_line_item.save()
                     except Product.DoesNotExist:
                         messages.error(request, (

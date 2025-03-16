@@ -3,6 +3,10 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def bag_contents(request):
 
@@ -52,4 +56,5 @@ def bag_contents(request):
         'grand_total': grand_total,
     }
 
+    logger.debug("Retrieving bag from session: %s", request.session.get('bag', {}))
     return context
