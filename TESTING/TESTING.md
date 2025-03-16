@@ -168,9 +168,9 @@ The following are bugs that I have come across while creating the Workout site.
 
 | Original image | Bug fixed image |
 | :---: | :---: |
-| ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/order-admin-issue.png) | ![screenshot]() |
+| ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/order-admin-issue.png) | ![screenshot](TESTING/media/admin-prices-fix.png) |
 
-- When amending the lineitem issue, the products now appeared in the order, but the price does not show.
+- When amending the lineitem issue, the products now appeared in the order, but the price does not show. The prices did not show due to an indentation issue in the model.
 
 - When deploying to heroku the application fails to load in the browser.
 
