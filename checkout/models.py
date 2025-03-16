@@ -49,6 +49,7 @@ class Order(models.Model):
         """ Generates order number if not set. """
         if not self.order_number:
             self.order_number = self._generate_order_number()
+
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -62,12 +63,11 @@ class OrderLineItem(models.Model):
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=False, editable=False)
 
+    def save(self, *args, **kwargs):
+        """ Overrides original save method and updates the order/line item total. """
+        self.lineitem_total = self.product.price * self.quantity
+        super().save(*args, **kwargs)
 
-def save(self, *args, **kwargs):
-    """ Overrides original save method and updates the order/line item total. """
-    self.lineitem_total = self.product.price * self.quantity
-    super().save(*args, **kwargs)
 
-
-def __str__(self):
-    return f'Item Number: {self.product.sku} on order {self.order.order_number}'
+    def __str__(self):
+        return f'Item Number: {self.product.sku} on order {self.order.order_number}'
