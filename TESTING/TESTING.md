@@ -172,6 +172,14 @@ The following are bugs that I have come across while creating the Workout site.
 
 - When amending the lineitem issue, the products now appeared in the order, but the price does not show.
 
+- When deploying to heroku the application fails to load in the browser.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/heroku-deployment-error.png) | ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/heroku-deployment-fix.png) |
+
+- Ran through Heroku logs to find the issue and it was with the f strings in the webhook handler python file. These were rewritten and then pushed to the repository.
+
 ***
 
 ## Unfixed Bugs
