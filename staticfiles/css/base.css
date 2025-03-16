@@ -1,0 +1,286 @@
+/* Root style colour scheme */
+:root {
+    --teal: #0ababd;
+    --black: #000;
+    --white: #fff;
+    --pink: #FF8096;
+    --taupe: #8C7D75;
+}
+
+/* Website fonts */
+.baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.raleway-font {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+/* Main body style */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/luxe-shoes-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Raleway', serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Main logo/branding styles */
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'Baskervville SC';
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* Styling for buttons */
+.shop-now-button {
+    background: var(--taupe);
+    color: var(--black);
+    min-width: 260px;
+}
+
+.btn-black {
+    background: var(--black);
+    color: var(--white);
+}
+
+.btn-taupe {
+    background: var(--taupe);
+    color: var(--black);
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: var(--white);
+}
+
+.text-black {
+    color: var(--black) !important;
+}
+
+.border-black {
+    border: var(--black) 1px solid !important;
+}
+
+.border-teal {
+    border: var(--teal) 1px solid !important;
+}
+
+.btn-outline-black {
+    background: var(--white);
+    color: var(--black) !important;
+    border: var(--black) 1px solid;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: var(--black);
+    color: var(--white) !important;
+}
+
+/* Delivery Banner Styling */
+
+.bg-taupe {
+    background-color: var(--taupe);
+}
+
+/* Overlay for products pages to have white background */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--white);
+    z-index: -1;
+}
+
+/* Style for account and shopping bag icons */
+.account-basket {
+    font-family: 'Baskervville SC' !important;
+}
+
+/* Font styling for products page & product details */
+.product-details-container, .product-container {
+    font-family: 'Raleway', serif;
+}
+
+/* Category badge background styles */
+.category-badge {
+    font-family: 'Raleway', serif;
+}
+a.category-badge > span.badge:hover {
+    background: var(--taupe) !important;
+    color: var(--white) !important;
+}
+
+/* Style for back to top button in products & update/remove buttons in bag */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-button:hover {
+    background: var(--taupe) !important;
+    color: var(--white) !important;
+}
+
+.btt-link,
+.update.link,
+.remove-link {
+    cursor: pointer;
+}
+
+.update-link:hover,
+.remove-item:hover {
+    background: var(--white);
+    color: var(--black) !important;
+}
+
+/* Shopping Bag Styles */
+.shopping-bag {
+    font-family: 'Raleway', serif;
+}
+
+/* Styles for the toast notifications */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+    font-family: 'Raleway', serif;
+    border-radius: 5px;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.checkout-style {
+    font-family: 'Raleway', serif;
+}
+
+
+
+/* -------------------------------------------MEDIA QUERIES */
+
+/* XL Screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Medium Screens & Bigger - Fixed Navbar */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* padding for mobile navbar */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}

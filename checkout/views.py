@@ -64,7 +64,7 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:  # CHECK WHETHER THIS IS CORRECT, AFFECTING ADMIN AND CANT VIEW ORDER
+                    else:
                         for shoesize, quantity in item_data['items_by_shoesize'].items():
                             order_line_item = OrderLineItem(
                                order=order,
