@@ -180,6 +180,14 @@ The following are bugs that I have come across while creating the Workout site.
 
 - Ran through Heroku logs to find the issue and it was with the f strings in the webhook handler python file. These were rewritten and then pushed to the repository.
 
+- When attempting to go throught the checkout process instead of checkout success showing a server error 500 appears.
+
+| Original image | Bug fixed image |
+| :---: | :---: |
+| ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/heroku-deployment-error.png) | ![screenshot](/Users/georginakidger/Documents/vscode-projects/Luxe-Shoes/TESTING/media/heroku-deployment-fix.png) |
+
+- Ran through Heroku logs to find the issue and it suggested there was an issue with shoe_size in orderlineitem. Checked this and ran migrations. No fix. Deleted the migration files and ran migrations again, no fix. Renamed all parts of code to align as shoe_sizes including the data items. No fix. 
+
 ***
 
 ## Unfixed Bugs
