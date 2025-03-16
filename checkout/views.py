@@ -76,7 +76,7 @@ def checkout(request):
                                 order=order,
                                 product=product,
                                 quantity=quantity,
-                                shoe_size=shoesize,
+                                shoe_sizes=shoesize, #maybe change this back?
                                 )
                                 order_line_item.save()
                     except Product.DoesNotExist:

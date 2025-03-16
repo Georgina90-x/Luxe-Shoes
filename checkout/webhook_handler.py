@@ -97,7 +97,7 @@ class StripeWH_Handler:
                                 order=order,
                                 product=product,
                                 quantity=quantity,
-                                shoe_size=shoesize,
+                                shoe_sizes=shoesize,
                                 )
                             order_line_item.save()
             except Exception as e:
