@@ -106,6 +106,59 @@ body {
     color: var(--white) !important;
 }
 
+/* Allauth form styling */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d; /* secondary text */
+}
+
+.allauth-form-inner-content input {
+    border-color: var(--taupe);
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: var(--taupe);
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--taupe);
+    border: var(--taupe) 1px solid;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+    
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+    
+.allauth-form-inner-content a {
+    color: #17a2b8; /* text-info */
+}
+
 /* Delivery Banner Styling */
 
 .bg-taupe {
@@ -166,6 +219,10 @@ a.category-badge > span.badge:hover {
 .remove-item:hover {
     background: var(--white);
     color: var(--black) !important;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
 }
 
 /* Shopping Bag Styles */
