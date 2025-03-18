@@ -75,7 +75,7 @@ class OrderLineItem(models.Model):
                               related_name='lineitems')
     product = models.ForeignKey(Product, null=False,
                                 blank=False, on_delete=models.CASCADE)
-    shoe_sizes = models.CharField(max_length=10, null=True, blank=True)
+    product_size = models.CharField(max_length=10, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=20,
                                          decimal_places=2, null=True,

@@ -17,8 +17,8 @@ def add_to_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     shoesize = None
-    if 'shoe_sizes' in request.POST:
-        shoesize = request.POST['shoe_sizes']
+    if 'product_size' in request.POST:
+        shoesize = request.POST['product_size']
     bag = request.session.get('bag', {})
 
     """ Logic for adding shoe sizes to the shopping bag """
@@ -52,8 +52,8 @@ def adjust_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     shoesize = None
-    if 'shoe_sizes' in request.POST:
-        shoesize = request.POST['shoe_sizes']
+    if 'product_size' in request.POST:
+        shoesize = request.POST['product_size']
     bag = request.session.get('bag', {})
 
     """ Logic for adjusting products with shoe sizes in the shopping bag """
@@ -85,8 +85,8 @@ def remove_from_bag(request, item_id):
 
     try:
         shoesize = None
-        if 'shoe_sizes' in request.POST:
-            shoesize = request.POST['shoe_sizes']
+        if 'product_size' in request.POST:
+            shoesize = request.POST['product_size']
         bag = request.session.get('bag', {})
 
         if shoesize:
