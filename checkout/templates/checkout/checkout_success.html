@@ -190,10 +190,17 @@
         </div>
         <div class="row my-2">
             <div class="col-12">
-                <span>
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-sm rounded-lg text-uppercase py-3">
-                        Now try something different.</a>
-                </span>
+                {% if from_profile %}
+                    <span>
+                        <a href="{% url 'profile' %}" class="shop-now-button btn btn-sm rounded text-uppercase py-3">
+                            Go To My Profile</a>
+                    </span>
+                {% else %}
+                    <span>
+                        <a href="{% url 'products' %}" class="shop-now-button btn btn-sm rounded-lg text-uppercase py-3">
+                            Now try something different.</a>
+                    </span>
+                {% endif %}
             </div>
         </div>
     </div>

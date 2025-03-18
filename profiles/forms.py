@@ -27,7 +27,7 @@ class UserProfileForm(forms.ModelForm):
 
         for field in self.fields:
             if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
+                placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
@@ -35,7 +35,7 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].label = False
 
                 # PUT THIS CODE BACK IN IF COUNTRY FIELDS WORKS
-            #if field != 'default_country': 
+            #if field != 'default_country':
                 #if self.fields[field].required:
                     #placeholder = f'{placeholders[field]} *'
                 #else:
