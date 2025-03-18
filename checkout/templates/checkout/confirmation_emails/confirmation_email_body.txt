@@ -1,0 +1,31 @@
+Congratulations {{ order.full_name }}!
+
+Welcome to the world of Luxe Shoes.
+
+We've got your order!
+
+Just to be sure, here are the details for your order below.
+If there are any errors, please be sure to contact us within 24hrs as adjustments cannot be made after this time.
+You can contact us here {{ contact_email }}.
+
+Order Number: {{ order.order_number }}
+
+Where it's going:
+{{ order.street_address1 }}
+{{ order.town_or_city }}
+{{ order.postcode }}
+{{ order.country }}
+{{ order.phone_number }}
+
+Costs:
+Delivery Cost: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+We will post your order from 3-5 business days, though this make take longer during bank holidays and the Christmastime.
+
+We cannot wait for you to receive your Luxe Shoes.
+
+Sincerely,
+
+Georgina
+Luxe Shoes

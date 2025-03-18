@@ -1,0 +1,1 @@
+Luxe Shoes Confirmation for Order Number {{ order.order_number }}
