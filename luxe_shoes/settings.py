@@ -26,7 +26,10 @@ ALLOWED_HOSTS = [
     '127.0.0.1',  # vs code preview
     'localhost',  # listen for stripe webhooks
     'luxe-shoes-84842264eb1e.herokuapp.com',  # deployed heroku website
+    '*',
 ]
+
+CSRF_TRUSTED_ORIGINS = ["luxe-shoes-84842264eb1e.herokuapp.com", "https://ami.responsivedesign.is"]
 
 
 # Application definition

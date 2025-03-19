@@ -21,7 +21,7 @@ Costs:
 Delivery Cost: £{{ order.delivery_cost }}
 Grand Total: £{{ order.grand_total }}
 
-We will post your order from 3-5 business days, though this make take longer during bank holidays and the Christmastime.
+We will post your order within 3-5 business days, though this make take longer during bank holidays and the Christmastime.
 
 We cannot wait for you to receive your Luxe Shoes.
 
