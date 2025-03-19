@@ -39,7 +39,7 @@ def checkout(request):
         stripe_public_key = settings.STRIPE_PUBLIC_KEY
         stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-        intent = None # added line may need to remove
+        intent = None  # added line may need to remove
 
         if request.method == 'POST':
             bag = request.session.get('bag', {})
@@ -92,8 +92,9 @@ def checkout(request):
                 request.session['save_info'] = 'save-info' in request.POST
                 return redirect(reverse('checkout_success', args=[order.order_number]))
             else:
-                messages.error(request, 'There was an error processing your form.\
-                            Please check you have input the correct details.')
+                messages.error(request, 'There was an error processing your \
+                                form. Please check you have input  \
+                               the correct details.')
 
         else:
             bag = request.session.get('bag', {})

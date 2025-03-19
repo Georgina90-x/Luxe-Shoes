@@ -6,6 +6,7 @@ if os.path.isfile('env.py'):
 
 from pathlib import Path
 from storages.backends.s3boto3 import S3Boto3Storage
+from decimal import Decimal
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,10 +27,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',  # vs code preview
     'localhost',  # listen for stripe webhooks
     'luxe-shoes-84842264eb1e.herokuapp.com',  # deployed heroku website
-    '*',
 ]
-
-CSRF_TRUSTED_ORIGINS = ["luxe-shoes-84842264eb1e.herokuapp.com", "https://ami.responsivedesign.is"]
 
 
 # Application definition
@@ -216,6 +214,8 @@ if 'USE_AWS' in os.environ:
 # Stripe
 FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PRICE = 9
+MINIMUM_ORDER_VALUE = Decimal('0.01')
+VAT_CALC = Decimal('0.20')
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
