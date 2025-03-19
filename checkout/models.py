@@ -8,6 +8,7 @@ from django_countries.fields import CountryField
 
 from products.models import Product
 from profiles.models import UserProfile
+from decimal import Decimal
 
 
 class Promo(models.Model):
@@ -36,7 +37,8 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
-    promos = models.ManyToManyField(Promo, blank=True)
+    #promos = models.ManyToManyField(Promo, blank=True)
+    vat_total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     order_total = models.DecimalField(max_digits=10,
                                       decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10,
@@ -65,6 +67,10 @@ class Order(models.Model):
             )
         else:
             self.delivery_cost = 0
+
+        vat_calc = Decimal(settings.VAT_CALC)
+        self.vat_total = (self.order_total * vat_calc).quantize(Decimal('0.01'))
+
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 

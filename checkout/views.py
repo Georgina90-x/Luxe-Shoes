@@ -9,6 +9,7 @@ from products.models import Product
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from decimal import Decimal
 
 import stripe
 import json
@@ -61,6 +62,12 @@ def checkout(request):
                 pid = request.POST.get('client_secret').split('_secret')[0]
                 order.stripe_pid = pid
                 order.original_bag = json.dumps(bag)
+
+                vat_rate = Decimal('0.20') # 20% UK VAT
+                vat_total = (order.order_total * vat_rate).quantize(Decimal('0.01'))
+
+                order.vat_total = vat_total
+                order.grand_total = order.order_total + vat_total
                 order.save()
                 for item_id, item_data in bag.items():
                     try:

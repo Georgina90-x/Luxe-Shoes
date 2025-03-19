@@ -19,15 +19,13 @@ class OrderAdmin(admin.ModelAdmin):
               'email', 'street_address1',
               'street_address2', 'town_or_city', 'county',
               'postcode', 'country', 'phone_number',
-              'delivery_cost', 'promos', 'order_total',
+              'delivery_cost', 'vat_total', 'order_total',
               'grand_total', 'original_bag',
               'stripe_pid')
 
     list_display = ('order_number', 'full_name', 'email',
-                    'delivery_cost',
+                    'delivery_cost', 'vat_total',
                     'order_total', 'grand_total',)
-
-    filter_horizontal = ('promos',)
 
     ordering = ('-date',)
 

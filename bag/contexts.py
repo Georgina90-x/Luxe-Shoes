@@ -37,31 +37,30 @@ def bag_contents(request):
                     'shoesize': shoesize,
                 })
 
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PRICE / 100)
+        free_delivery_calc = settings.FREE_DELIVERY_THRESHOLD - total
+    else:
+        delivery = 0
+        free_delivery_calc = 0
+
     if request.path in ['/bag/', '/checkout/']:
-        vat_calc = Decimal('0.2')  # 20% Standard VAT Rate Calculation for UK
-        vat_total = (total * vat_calc).quantize(Decimal('0.01'),)
-
-        if total < settings.FREE_DELIVERY_THRESHOLD:
-            delivery = total * Decimal(settings.STANDARD_DELIVERY_PRICE / 100)
-            free_delivery_calc = settings.FREE_DELIVERY_THRESHOLD - total
-        else:
-            delivery = 0
-            free_delivery_calc = 0
-
-        grand_total = delivery + total + vat_total
+        vat_calc = Decimal('0.20') # calculates the 20% UK VAT 
+        vat_total = (total * vat_calc).quantize(Decimal('0.01'))
     else:
         vat_total = Decimal('0.00')
-        delivery = Decimal('0.00')
+
+    grand_total = delivery + total + vat_total
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
-        'vat_total': vat_total,
         'free_delivery_calc': free_delivery_calc,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'vat_total': vat_total,
     }
 
     logger.debug("Retrieving bag from session: %s", request.session.get('bag', {}))
