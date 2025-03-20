@@ -63,7 +63,7 @@ def checkout(request):
                 order.stripe_pid = pid
                 order.original_bag = json.dumps(bag)
 
-                vat_rate = Decimal('0.20') # 20% UK VAT
+                vat_rate = Decimal('0.20')  # 20% UK VAT
                 vat_total = (order.order_total * vat_rate).quantize(Decimal('0.01'))
 
                 order.vat_total = vat_total

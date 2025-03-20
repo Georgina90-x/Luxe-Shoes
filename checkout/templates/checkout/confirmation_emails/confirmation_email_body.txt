@@ -19,7 +19,8 @@ Where it's going:
 
 Costs:
 Delivery Cost: £{{ order.delivery_cost }}
-Grand Total: £{{ order.grand_total }}
+VAT Total: {{ order.vat_total }}
+Grand Total (Inc. VAT): £{{ order.grand_total }}
 
 We will post your order within 3-5 business days, though this make take longer during bank holidays and the Christmastime.
 

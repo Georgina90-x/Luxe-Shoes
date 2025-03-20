@@ -1,4 +1,12 @@
-
+/* Root style colour scheme */
+:root {
+  --teal: #0ababd;
+  --black: #000;
+  --white: #fff;
+  --pink: #FF8096;
+  --taupe: #8C7D75;
+  --grey: #aab7c4;
+}
 
 .StripeElement,
 .stripe-style-input {
@@ -24,7 +32,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: var(--grey);
 }
 
 .fieldset-label {
@@ -34,18 +42,18 @@
 
 select,
 select option {
-  color: #000;
+  color: var(--black);
 }
 
 select:invalid,
 select option[value=""] {
-  color: #aab7c4 !important;
+  color: var(--grey) !important;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: var(--black);
+    border: var(--black) 1px solid;
 }
 
 /* checkout page loading spinner for payment processing */
