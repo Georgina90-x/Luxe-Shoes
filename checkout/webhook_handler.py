@@ -101,7 +101,9 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
+        order_exists = Order.objects.filter(stripe_pid=pid).exists()
         if order_exists:
+            order = Order.objects.get(stripe_pid=pid)
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',

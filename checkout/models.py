@@ -1,4 +1,7 @@
 import uuid
+import logging
+
+logger = logging.getLogger(__name__)
 
 from django.db import models
 from django.db.models import Sum
@@ -57,6 +60,8 @@ class Order(models.Model):
         """
         Updates the grand total when a new line is added. Inc delivery price.
         """
+
+        logger.info(f"Updating total for Order {self.id}")
         self.order_total = (
             self.lineitems.aggregate(Sum('lineitem_total'))
             ['lineitem_total__sum'] or 0
@@ -91,7 +96,8 @@ class OrderLineItem(models.Model):
                               related_name='lineitems')
     product = models.ForeignKey(Product, null=False,
                                 blank=False, on_delete=models.CASCADE)
-    product_size = models.CharField(max_length=10, null=True, blank=True)
+    shoe_sizes = models.CharField(max_length=10, null=True, blank=True)
+    product_size = models.CharField(max_length=10, null=True, blank=True) #temp whilst finding fix
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=20,
                                          decimal_places=2, null=True,
