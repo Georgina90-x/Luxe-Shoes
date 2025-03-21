@@ -56,6 +56,7 @@ def checkout(request):
                 'country': request.POST['country'],
                 'phone_number': request.POST['phone_number'],
             }
+
             order_form = OrderForm(form_data)
             if order_form.is_valid():
                 order = order_form.save(commit=False)
@@ -68,6 +69,8 @@ def checkout(request):
 
                 order.vat_total = vat_total
                 order.grand_total = order.order_total + vat_total
+                order.country = form_data['country'][:2].upper()
+                print(f"Final country saved: {order.country} (length: {len(order.country)})")
                 order.save()
                 for item_id, item_data in bag.items():
                     try:
